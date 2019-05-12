@@ -1,0 +1,4 @@
+<input type="text" [value]="value" (input)="setText($event.target.value)" (blur)="onTouched()" />
+<div *ngIf="isInvalid()" class="error">
+  <span class="error">Invalid Text Box: {{ title }}</span>
+</div>

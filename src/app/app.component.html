@@ -1,0 +1,21 @@
+<div class="spaced">
+  <form novalidate autocomplete="off" [formGroup]="fg" (ngSubmit)="submit()">
+    <div class="spaced">
+      <label>Single</label>
+      <app-text-box [submitted]="submitted" formControlName="text" title="Single"></app-text-box>
+    </div>
+    <div class="spaced">
+      <app-text-box-wrapper [submitted]="submitted" formControlName="wrapper"></app-text-box-wrapper>
+    </div>
+    <div class="spaced">
+      <button type="submit">Submit</button>
+    </div>
+  </form>
+  <div>Form Status: {{ formStatus }}</div>
+  <div>Submitted: {{ submitted }}</div>
+  <div>Text Errors: {{ textErrors }}</div>
+  <div>Text Value: {{ textValue }}</div>
+  <div>Wrapper Errors: {{ wrapperErrors }}</div>
+  <div>Wrapper Value: {{ wrapperValue }}</div>
+</div>
+<app-master-page></app-master-page>

@@ -1,0 +1,13 @@
+<div [formGroup]="fg">
+  <div>
+    <label>Wrapper1</label>
+    <app-text-box [submitted]="submitted" formControlName="wrapper1" title="Wrapper1"></app-text-box>
+  </div>
+  <div>
+    <label>Wrapper2</label>
+    <app-text-box [submitted]="submitted" formControlName="wrapper2" title="Wrapper2"></app-text-box>
+  </div>
+  <div *ngIf="isInvalid()">
+    <span class="error">Invalid Text Box Wrapper</span>
+  </div>
+</div>
